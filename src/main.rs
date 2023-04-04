@@ -15,6 +15,10 @@ fn main() {
     println!("main:");
 
     while let Some(c) = p.next() {
+        if c.is_whitespace() {
+            continue;
+        }
+
         match c {
             '+' => {
                 if let Some(c) = p.next() {
